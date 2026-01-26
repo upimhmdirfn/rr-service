@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://rr-service.vercel.app/sitemap.xml
+https://rr-service-beta.vercel.app/
