@@ -63,26 +63,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 3. WHATSAPP FORM LOGIC ---
+    // --- 3. WHATSAPP FORM LOGIC (UPDATED WITH DELIVERY) ---
     const waForm = document.getElementById('waForm');
     if(waForm) {
         waForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('waName').value;
+            const method = document.getElementById('waMethod').value; // Ambil data metode
             const type = document.getElementById('waType').value;
             const damage = document.getElementById('waDamage').value;
             const message = document.getElementById('waMessage').value;
 
             if (!name || !message) {
-                alert("Harap lengkapi Nama dan Detail Keluhan.");
+                alert("Harap lengkapi Nama dan Detail Keluhan/Alamat.");
                 return;
             }
 
-            const text = `Halo Admin RR SERVICE, saya ingin booking service.%0A%0A` +
+            // Logic Header Pesan (Beda icon jika Antar Jemput)
+            let headerMsg = "Halo Admin RR SERVICE, saya ingin booking service.";
+            if(method === "Antar Jemput") {
+                headerMsg = "🚨 Halo Admin! Saya mau request *ANTAR JEMPUT* service HP.";
+            }
+
+            const text = `${headerMsg}%0A%0A` +
                          `👤 *Nama:* ${name}%0A` +
+                         `🛵 *Metode:* ${method.toUpperCase()}%0A` +
                          `📱 *Tipe HP:* ${type}%0A` +
                          `🔧 *Kerusakan:* ${damage}%0A` +
-                         `📝 *Keluhan:* ${message}`;
+                         `📝 *Detail/Alamat:* ${message}`;
 
             const url = `https://wa.me/6281379689393?text=${text}`;
             window.open(url, '_blank');
@@ -101,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 5. MODAL CEK STATUS (UPDATE: SHOW NAME & CACHE BUSTING) ---
+    // --- 5. MODAL CEK STATUS (REALTIME GOOGLE SHEETS) ---
     const modal = document.getElementById("statusModal");
     const btnNav = document.getElementById("btnCheckStatusNav");
     const btnHero = document.getElementById("btnCheckStatusHero");
@@ -155,15 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 let foundData = null;
 
-                // ASUMSI STRUKTUR SHEET:
-                // Index 0 = No
-                // Index 1 = Invoice (Kolom B)
-                // Index 2 = Nama (Kolom C) -> KITA AMBIL INI
-                // Index 3 = Status (Kolom D)
-                // Index 4 = Keterangan (Kolom E)
-
                 for (let i = 1; i < rows.length; i++) {
-                    // Bersihkan tanda kutip jika ada
                     const currentInv = rows[i][1] ? rows[i][1].replace(/['"]+/g, '').trim().toUpperCase() : '';
                     
                     if (currentInv === code) {
@@ -186,7 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         statusClass = 'status-error';
                     }
 
-                    // TAMPILAN HASIL BARU (DENGAN NAMA)
                     resultDiv.className = `status-result ${statusClass}`;
                     resultDiv.innerHTML = `
                         <div style="border-bottom:1px solid rgba(0,0,0,0.1); padding-bottom:10px; margin-bottom:10px;">

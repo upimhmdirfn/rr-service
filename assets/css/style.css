@@ -1,4 +1,4 @@
-/* ================= VARIABLES ================= */
+/* ================= 1. VARIABLES & THEME ================= */
 :root {
     --primary: #2563eb;
     --neon-blue: #00f2ff;
@@ -26,7 +26,7 @@ body.dark-mode {
     --nav-bg: rgba(15, 23, 42, 0.9);
 }
 
-/* ================= RESET & BASE ================= */
+/* ================= 2. RESET & BASE STYLES ================= */
 * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
 body {
@@ -55,7 +55,7 @@ a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
-/* ================= GLASS PANEL STYLE ================= */
+/* ================= 3. UTILITY COMPONENTS ================= */
 .glass-panel {
     background: var(--glass-bg);
     backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
@@ -79,87 +79,7 @@ img { max-width: 100%; display: block; }
 }
 .glass-panel:hover::after { left: 150%; transition: 0.7s ease-in-out; }
 
-/* ================= HEADER & NAV (FIXED) ================= */
-/* ================= HEADER & NAV (DIRAPIKAN) ================= */
-header {
-    position: fixed; 
-    top: 25px; 
-    left: 50%; 
-    transform: translateX(-50%);
-    width: 95%; max-width: 1200px; /* Lebar maksimal agar tidak terlalu panjang */
-    height: 75px;
-    
-    background: var(--nav-bg); 
-    backdrop-filter: blur(25px);
-    border: 1px solid var(--glass-border); 
-    border-radius: 100px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.08); 
-    z-index: 1000;
-    
-    /* Flexbox Layout Presisi */
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; /* Logo kiri, Menu kanan mentok */
-    padding: 0 30px; /* Padding kiri kanan yang pas */
-    transition: background 0.3s;
-}
-
-.header-container {
-    /* Container ini tidak wajib jika header sudah flex, 
-       tapi kita set 100% untuk jaga-jaga struktur HTML */
-    width: 100%; display: flex; justify-content: space-between; align-items: center;
-}
-
-/* LOGO FIX */
-.logo {
-    display: flex; align-items: center; height: 100%;
-    transition: transform 0.3s ease;
-}
-.logo img {
-    height: 45px; /* Tinggi pasti agar tidak merusak layout */
-    width: auto;
-    object-fit: contain;
-}
-.logo:hover { transform: scale(1.05); }
-
-/* MENU LINKS FIX */
-.nav-links { 
-    display: flex; 
-    gap: 8px; /* Jarak antar menu agar tidak dempet */
-    align-items: center;
-}
-
-.nav-links a {
-    padding: 10px 20px; 
-    border-radius: 50px;
-    font-weight: 600; 
-    font-size: 0.95rem; 
-    color: var(--text-secondary);
-    transition: all 0.3s ease;
-    white-space: nowrap; /* Mencegah teks menu turun baris */
-}
-
-/* --- EFEK HOVER/CURSOR KACA (TETAP DIPERTAHANKAN) --- */
-.nav-links a:hover {
-    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.5));
-    color: var(--neon-blue);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-/* Hamburger Menu */
-.menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-.bar { width: 25px; height: 3px; background-color: var(--text-main); border-radius: 3px; transition: 0.3s; }
-
-/* ================= TYPOGRAPHY & BUTTONS ================= */
-.section-title { text-align: center; margin-bottom: 70px; }
-.section-title h2 {
-    font-size: 3rem; font-weight: 800;
-    background: linear-gradient(135deg, var(--text-main) 30%, var(--neon-blue));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    margin-bottom: 10px; letter-spacing: -1px;
-}
-.section-title p { color: var(--text-secondary); }
-
+/* Buttons */
 .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
     padding: 16px 36px; border-radius: 14px; font-weight: 700; font-size: 1rem; cursor: pointer; border: none;
@@ -176,8 +96,53 @@ header {
 }
 .btn-outline:hover { background: var(--primary); color: white; }
 
-/* ================= SECTIONS & LAYOUT ================= */
-section { padding: 120px 0; }
+/* Spacing */
+section {
+    padding: 60px 0; 
+    position: relative;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.section-title h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.section-title p { color: var(--text-secondary); }
+
+/* ================= 4. HEADER & NAVIGATION ================= */
+header {
+    position: fixed; top: 25px; left: 50%; transform: translateX(-50%);
+    width: 95%; max-width: 1200px; height: 75px;
+    background: var(--nav-bg); backdrop-filter: blur(25px);
+    border: 1px solid var(--glass-border); border-radius: 100px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08); z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 30px; transition: background 0.3s;
+}
+
+.header-container { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+
+.logo { display: flex; align-items: center; height: 100%; transition: transform 0.3s ease; color: var(--text-main); text-decoration: none; font-weight: 800; font-size: 1.5rem; gap: 10px; }
+.logo img { height: 45px; width: auto; object-fit: contain; }
+.logo:hover { transform: scale(1.05); }
+
+.nav-links { display: flex; gap: 8px; align-items: center; }
+.nav-links a {
+    padding: 10px 20px; border-radius: 50px; font-weight: 600; font-size: 0.95rem; 
+    color: var(--text-secondary); transition: all 0.3s ease; white-space: nowrap;
+}
+.nav-links a:hover {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.5));
+    color: var(--neon-blue); box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+.bar { width: 25px; height: 3px; background-color: var(--text-main); border-radius: 3px; transition: 0.3s; }
+
+/* ================= 5. HOME & CONTENT SECTIONS ================= */
 #home { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 120px; }
 .hero-content { z-index: 2; position: relative; max-width: 900px; }
 .hero-buttons { display: flex; justify-content: center; gap: 15px; margin-top: 30px; }
@@ -207,7 +172,8 @@ section { padding: 120px 0; }
 .service-list li { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; color: var(--text-secondary); }
 .service-list li i { color: var(--neon-green); }
 
-/* Booking & Forms */
+/* Booking */
+.delivery-banner { display: flex; align-items: center; gap: 20px; padding: 20px; border: 1px solid var(--neon-green); margin-bottom: 30px; }
 .booking-wrapper { display: flex; flex-wrap: wrap; border-radius: 32px; background: var(--glass-bg); backdrop-filter: blur(30px); border: 1px solid var(--glass-border); overflow: hidden; box-shadow: 0 30px 60px -10px rgba(0,0,0,0.1); }
 .booking-info { flex: 1; min-width: 350px; padding: 60px; background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(219, 234, 254, 0.2) 100%); border-right: 1px solid var(--glass-border); }
 .booking-info h3 { color: var(--text-main); font-weight: 800; margin-bottom: 20px; font-size: 2rem; }
@@ -217,7 +183,6 @@ section { padding: 120px 0; }
 input, select, textarea { width: 100%; padding: 15px 20px; background: var(--input-bg); border: 1px solid rgba(255, 255, 255, 0.5); border-left: 4px solid var(--neon-blue); border-radius: 12px; color: var(--text-main); font-family: 'Poppins', sans-serif; font-size: 1rem; margin-bottom: 20px; transition: all 0.3s ease; }
 input:focus, select:focus, textarea:focus { outline: none; background: rgba(255,255,255,0.9); border-color: var(--neon-blue); box-shadow: 0 10px 25px rgba(0, 242, 255, 0.2); transform: translateY(-3px); }
 .booking-form button { margin-top: 10px; width: 100%; padding: 18px; background: linear-gradient(135deg, #60a5fa 0%, var(--neon-purple) 100%); color: #fff; font-weight: 700; border-radius: 14px; border: none; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; }
-.booking-form button:hover { box-shadow: 0 15px 35px rgba(67, 97, 238, 0.6); transform: translateY(-3px); }
 
 /* Pricing */
 .pricing-container { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
@@ -229,18 +194,15 @@ input:focus, select:focus, textarea:focus { outline: none; background: rgba(255,
 .price-row { display: flex; justify-content: space-between; padding: 20px 0; border-bottom: 1px dashed var(--text-secondary); align-items: center; }
 .price-row strong { color: var(--primary); font-size: 1.1rem; text-align: right; min-width: 140px; }
 
-/* Gallery */
+/* Gallery & Reviews */
 .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .gallery-card { position: relative; border-radius: 20px; overflow: hidden; height: 300px; cursor: pointer; box-shadow: var(--glass-shadow); }
-@media (min-width: 1024px) { .gallery-grid { grid-template-columns: repeat(4, 1fr); } }
-@media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
 .gallery-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 .gallery-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 25px; background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.5) 70%, transparent 100%); color: white; transform: translateY(100px); transition: transform 0.4s ease; backdrop-filter: blur(5px); }
 .gallery-card:hover .gallery-img { transform: scale(1.1); }
 .gallery-card:hover .gallery-overlay { transform: translateY(0); }
 .gallery-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 5px; color: var(--neon-blue); }
 
-/* REVIEWS SECTION */
 .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 .review-card { padding: 30px; display: flex; flex-direction: column; justify-content: space-between; }
 .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
@@ -249,10 +211,8 @@ input:focus, select:focus, textarea:focus { outline: none; background: rgba(255,
 .review-text { font-style: italic; color: var(--text-secondary); margin-bottom: 20px; flex-grow: 1; }
 .review-author { display: flex; align-items: center; gap: 15px; }
 .author-avatar { width: 45px; height: 45px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; }
-.review-author h4 { font-size: 1rem; margin: 0; color: var(--text-main); }
-.review-author span { font-size: 0.8rem; color: var(--text-secondary); }
 
-/* FAQ SECTION */
+/* FAQ */
 .faq-container { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
 .faq-item { padding: 0; overflow: hidden; }
 .faq-question { padding: 20px 25px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: 0.3s; }
@@ -264,7 +224,150 @@ input:focus, select:focus, textarea:focus { outline: none; background: rgba(255,
 .faq-item.active .faq-question i { transform: rotate(180deg); }
 .faq-item.active .faq-answer { max-height: 200px; }
 
-/* MODAL CEK STATUS */
+/* ================= 6. FOOTER (PERBAIKAN FINAL) ================= */
+/* ================= 11. FOOTER (PERBAIKAN FINAL - EFEK KEMBALI) ================= */
+footer {
+    background-color: #050505;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    margin-top: 100px;
+    color: #94a3b8;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 60px;
+    align-items: start;
+}
+
+/* LOGO FIX */
+footer .logo {
+    color: #ffffff !important;
+    margin-bottom: 20px;
+}
+footer .logo i {
+    color: var(--neon-green);
+}
+
+.footer-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #94a3b8;
+    max-width: 90%;
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 3px;
+    background: var(--neon-blue);
+    border-radius: 2px;
+}
+
+/* --- PERBAIKAN UTAMA: MENGEMBALIKAN EFEK KOTAK KONTAK --- */
+/* Kita target class .footer-contact-box langsung */
+.footer-contact-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03); /* Latar transparan */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Border tipis */
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #fff !important; /* Paksa teks putih */
+    cursor: pointer;
+}
+
+/* Efek Hover (Saat disentuh/diarahkan mouse) */
+.footer-contact-box:hover {
+    background: rgba(255, 255, 255, 0.1); /* Latar jadi lebih terang */
+    border-color: var(--neon-blue); /* Border menyala biru */
+    transform: translateY(-5px); /* Naik sedikit */
+    box-shadow: 0 10px 20px rgba(0, 242, 255, 0.15); /* Bayangan neon */
+}
+
+/* Animasi Ikon di dalamnya */
+.footer-contact-box i {
+    transition: transform 0.3s;
+}
+.footer-contact-box:hover i {
+    transform: scale(1.1); /* Ikon membesar sedikit saat hover */
+}
+
+.footer-contact-box span {
+    display: block;
+}
+
+/* Copyright Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* FIX RESPONSIVE FOOTER */
+@media (max-width: 768px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .footer-desc { margin: 0 auto; }
+    .footer-col h4::after { left: 50%; transform: translateX(-50%); }
+    .footer-contact-box { justify-content: center; text-align: left; }
+}
+
+/* ================= 12. WIDGETS & MODALS (FINAL UPDATE) ================= */
+.widget-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 2000; align-items: flex-end; }
+
+.float-btn { width: 60px; height: 60px; border-radius: 20px; display: flex; justify-content: center; align-items: center; font-size: 24px; color: #fff; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: all 0.3s; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); text-decoration: none; }
+.float-btn:hover { transform: scale(1.15); border-color: #fff; box-shadow: 0 0 20px rgba(255,255,255,0.4); }
+
+/* Warna Hover Sosial Media */
+.whatsapp:hover { background: #25d366; } 
+.facebook:hover { background: #1877f2; } 
+.instagram:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+
+/* BARU: Warna Hover TikTok (Gradient Hitam ke Merah/Cyan) */
+.tiktok:hover { background: linear-gradient(45deg, #000000 0%, #333333 100%); border-color: #fe2c55; box-shadow: 0 0 20px rgba(254, 44, 85, 0.4); }
+
+.theme-switch-btn { width: 100%; padding: 10px; border-radius: 10px; border: none; background: linear-gradient(135deg, #333, #000); color: #fff; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; }
+
+/* UPDATE POSISI PANEL (Dinaikkan ke 325px) */
+.settings-panel { 
+    position: absolute; 
+    bottom: 325px; /* Naik menyesuaikan jumlah tombol */
+    right: 0; 
+    width: 220px; 
+    padding: 35px; 
+    background: var(--glass-bg); 
+    backdrop-filter: blur(20px); 
+    border: 1px solid var(--glass-border); 
+    border-radius: 20px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+    transform: scale(0); 
+    opacity: 0; 
+    transform-origin: bottom right; 
+    transition: all 0.3s ease; 
+}
+.settings-panel.active { transform: scale(1); opacity: 1; }
+
+/* Modal Styles tetap sama... */
 .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(5px); }
 .modal-content { margin: 10% auto; padding: 40px; width: 90%; max-width: 500px; position: relative; animation: slideDown 0.4s ease; }
 @keyframes slideDown { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
@@ -274,35 +377,36 @@ input:focus, select:focus, textarea:focus { outline: none; background: rgba(255,
 .status-success { background: rgba(10, 255, 96, 0.1); border: 1px solid #0aff60; color: var(--text-main); }
 .status-pending { background: rgba(255, 193, 7, 0.1); border: 1px solid #ffc107; color: var(--text-main); }
 .status-error { background: rgba(255, 71, 87, 0.1); border: 1px solid #ff4757; color: var(--text-main); }
-
-/* Footer & Widgets */
-footer { margin-top: 100px; background: #0f172a; color: #94a3b8; padding: 80px 0 30px; border-top: 5px solid var(--neon-blue); }
-.footer-col h4 { color: #fff; margin-bottom: 25px; font-size: 1.2rem; text-transform: uppercase; }
-.footer-link-box a { display: flex; align-items: center; gap: 15px; padding: 15px; border-radius: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
-.footer-link-box a:hover { background: rgba(255,255,255,0.1); border-color: var(--neon-blue); box-shadow: 0 0 20px rgba(0, 242, 255, 0.2); transform: translateX(5px); }
-.widget-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 2000; align-items: flex-end; }
-.float-btn { width: 60px; height: 60px; border-radius: 20px; display: flex; justify-content: center; align-items: center; font-size: 24px; color: #fff; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: all 0.3s; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); text-decoration: none; }
-.float-btn:hover { transform: scale(1.15); border-color: #fff; box-shadow: 0 0 20px rgba(255,255,255,0.4); }
-.whatsapp:hover { background: #25d366; } .facebook:hover { background: #1877f2; } .instagram:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
-.theme-switch-btn { width: 100%; padding: 10px; border-radius: 10px; border: none; background: linear-gradient(135deg, #333, #000); color: #fff; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; }
-.settings-panel { position: absolute; bottom: 240px; right: 0; width: 200px; padding: 20px; background: var(--glass-bg); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transform: scale(0); opacity: 0; transform-origin: bottom right; transition: all 0.3s ease; }
-.settings-panel.active { transform: scale(1); opacity: 1; }
-
-/* ================= RESPONSIVE (CRITICAL UPDATE) ================= */
-/* Update Breakpoint dari 968px ke 1150px untuk mengakomodasi menu yang banyak */
+/* ================= 8. RESPONSIVE ================= */
 @media (max-width: 1150px) {
     header { height: 60px; top: 15px; width: 90%; padding: 0 15px; }
     .header-container { width: 100%; } 
-    .menu-toggle { display: flex; } /* Tampilkan Hamburger lebih awal */
-    
+    .menu-toggle { display: flex; } 
     .nav-menu { position: fixed; top: 80px; left: -100%; width: 100%; height: calc(100vh - 80px); background: var(--nav-bg); flex-direction: column; align-items: center; justify-content: center; transition: 0.4s; backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); }
     .nav-menu.active { left: 0; }
-    
-    /* Menu Mobile tetap vertikal dan rapi */
     .nav-links { flex-direction: column; text-align: center; gap: 25px; width: 100%; }
     .nav-links a { font-size: 1.3rem; width: 80%; display: block; margin: 0 auto; padding: 15px; }
     .nav-btn-status { margin-left: 0; margin-top: 10px; }
-    
     .hero-buttons { flex-direction: column; } .hero-content h1 { font-size: 2.8rem; }
     .booking-wrapper { flex-direction: column; } .booking-form { padding: 30px; } .form-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    section { padding: 50px 0; }
+    /* FOOTER MOBILE FIX */
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .footer-desc { margin: 0 auto; }
+    .footer-col h4::after { left: 50%; transform: translateX(-50%); }
+    .footer-link-box a { justify-content: center; text-align: left; }
+}
+
+@media (max-width: 600px) {
+    .delivery-banner { flex-direction: column; text-align: center; }
+    .delivery-banner div:first-child { margin-bottom: 10px; }
+    .gallery-grid { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 1024px) { 
+    .gallery-grid { grid-template-columns: repeat(4, 1fr); } 
 }

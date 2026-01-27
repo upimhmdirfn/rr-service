@@ -10,17 +10,17 @@
     
     <title>RR SERVICE - Ahli Service Android & iPhone Bengkulu</title>
     
-   <link rel="canonical" href="https://rr-service-beta.vercel.app/">
+    <link rel="canonical" href="https://rr-service-beta.vercel.app/">
 
     <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rr-service-beta.vercel.app/">
+    <meta property="og:url" content="https://rr-service-beta.vercel.app/">
     <meta property="og:title" content="RR SERVICE - Ahli Service HP Bengkulu (Bergaransi)">
     <meta property="og:description" content="Spesialis service iPhone & Android di Bengkulu. Ganti LCD, Baterai, Mati Total. Bisa ditunggu & Cek status servis online.">
-   <meta property="og:image" content="https://rr-service-beta.vercel.app/assets/images/logo.png">
+    <meta property="og:image" content="https://rr-service-beta.vercel.app/assets/images/logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="RR SERVICE - Service HP Terbaik Bengkulu">
     <meta name="twitter:description" content="Solusi perbaikan gadget iPhone & Android cepat dan bergaransi di Bengkulu.">
-   <meta name="twitter:image" content="https://rr-service-beta.vercel.app/assets/images/logo.png">
+    <meta name="twitter:image" content="https://rr-service-beta.vercel.app/assets/images/logo.png">
 
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     
@@ -170,6 +170,17 @@
                 <h2>Booking Service Online</h2>
                 <p>Isi form untuk mendapatkan prioritas antrian VIP</p>
             </div>
+            
+            <div class="delivery-banner glass-panel" style="margin-bottom: 30px; display:flex; align-items:center; gap:20px; padding:20px; border:1px solid var(--neon-green);">
+                <div style="background:rgba(10, 255, 96, 0.2); width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center;">
+                    <i class="fas fa-motorcycle" style="font-size:1.8rem; color:var(--neon-green);"></i>
+                </div>
+                <div>
+                    <h3 style="margin:0; font-size:1.2rem;">Tersedia Layanan Antar Jemput!</h3>
+                    <p style="margin:0; font-size:0.95rem; color:var(--text-secondary);">Mager keluar rumah? Pilih opsi <b>"Antar Jemput"</b> di form bawah ini. Kurir kami akan datang ke lokasi Anda.</p>
+                </div>
+            </div>
+
             <div class="booking-wrapper">
                 <div class="booking-info">
                     <h3>Hubungi RR SERVICE</h3>
@@ -189,6 +200,15 @@
                             <label>Nama Lengkap</label>
                             <input type="text" id="waName" placeholder="Masukkan Nama Anda">
                         </div>
+                        
+                        <div style="grid-column: 1/-1">
+                            <label style="color:var(--neon-green); font-weight:bold;">Metode Layanan</label>
+                            <select id="waMethod" style="border-color:var(--neon-green);">
+                                <option value="Datang ke Toko">Saya Datang Sendiri ke Toko</option>
+                                <option value="Antar Jemput">Request Antar Jemput (Delivery)</option>
+                            </select>
+                        </div>
+
                         <div>
                             <label>Tipe HP</label>
                             <select id="waType">
@@ -210,8 +230,8 @@
                             </select>
                         </div>
                         <div style="grid-column: 1/-1">
-                            <label>Detail Keluhan</label>
-                            <textarea id="waMessage" rows="4" placeholder="Jelaskan kondisi HP Anda..."></textarea>
+                            <label>Detail Keluhan / Alamat Jemput</label>
+                            <textarea id="waMessage" rows="4" placeholder="Jelaskan kondisi HP. Jika pilih Antar Jemput, tulis alamat lengkap Anda disini..."></textarea>
                         </div>
                     </div>
                     <button type="submit">
@@ -249,7 +269,8 @@
                         <div class="price-row"><span>LCD Samsung A/M Series</span><strong>Mulai dari Rp 250K</strong></div>
                         <div class="price-row"><span>LCD Xiaomi/Oppo/Vivo</span><strong>Mulai dari Rp 350K</strong></div>
                         <div class="price-row"><span>Ganti Baterai Tanam Ori</span><strong>Mulai dari Rp 250K</strong></div>
-                        <div class="price-row"><span>Ganti Konektor Charger</span><strong>Mulai dari Rp 50K</strong></div>
+                        <div class="price-row"><span>Ganti Konektor Charger</span><strong> Mulai dari Rp 50K </strong></div>
+                        
                         <div class="price-row"><span>Software / Bootloop</span><strong>Mulai dari Rp 100K</strong></div>
                     </div>
                 </div>
@@ -310,7 +331,7 @@
         </div>
     </section>
     
-    <section id="gallery">
+ <section id="gallery">
         <div class="container">
             <div class="section-title">
                 <h2>Dokumentasi & Aktivitas</h2>
@@ -318,33 +339,45 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-card glass-panel">
-                    <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Alat Service" class="gallery-img" loading="lazy">
+                     <img src="/assets/images/tools.jpg"
+         alt="Service Software"
+         class="gallery-img"
+         loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Peralatan Presisi</div>
                         <div class="gallery-desc">Menggunakan mikroskop dan alat solder modern.</div>
                     </div>
                 </div>
                 <div class="gallery-card glass-panel">
-                    <img src="https://images.unsplash.com/photo-1563861126-7871b69738f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Ganti LCD" class="gallery-img" loading="lazy">
+                     <img src="/assets/images/baterai.jpg"
+         alt="Service Software"
+         class="gallery-img"
+         loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Ganti LCD & Baterai</div>
                         <div class="gallery-desc">Pengerjaan rapi, segel kembali presisi.</div>
                     </div>
                 </div>
                 <div class="gallery-card glass-panel">
-                    <img src="https://images.unsplash.com/photo-1562408590-e32931084e23?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Sparepart Original" class="gallery-img" loading="lazy">
+   <img src="/assets/images/sparepart.jpg"
+         alt="Service Software"
+         class="gallery-img"
+         loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Stok Sparepart</div>
                         <div class="gallery-desc">Tersedia komponen original lengkap.</div>
                     </div>
                 </div>
-                <div class="gallery-card glass-panel">
-                    <img src="https://images.unsplash.com/photo-1550041473-d296a1a8ec52?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Service Software" class="gallery-img" loading="lazy">
-                    <div class="gallery-overlay">
-                        <div class="gallery-title">Software & Data</div>
-                        <div class="gallery-desc">Perbaikan bootloop dan backup data.</div>
-                    </div>
-                </div>
+              <div class="gallery-card glass-panel">
+    <img src="/assets/images/software.jpg"
+         alt="Service Software"
+         class="gallery-img"
+         loading="lazy">
+    <div class="gallery-overlay">
+        <div class="gallery-title">Software & Data</div>
+        <div class="gallery-desc">Perbaikan bootloop dan backup data.</div>
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -396,67 +429,75 @@
         </div>
     </section>
 
-    <footer id="contact">
+   <footer id="contact">
         <div class="container">
-            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:50px;">
+            <div class="footer-grid">
+                
                 <div class="footer-col">
-                    <h2 class="logo" style="margin-bottom:25px; font-size: 2rem; color:white; background:transparent; padding:0; box-shadow:none;">
-                        <i class="fas fa-mobile-screen-button"></i> RR SERVICE
+                    <h2 class="logo">
+                        <i class="fas fa-mobile-screen-button" style="color:var(--neon-green)"></i> RR SERVICE
                     </h2>
-                    <p style="opacity: 0.8; font-size: 1.1rem;">Mitra terpercaya untuk solusi perbaikan gadget Anda di Bengkulu. Mengutamakan kualitas dan kepuasan pelanggan sejak 2020.</p>
+                    <p class="footer-desc">
+                        Mitra terpercaya untuk solusi perbaikan gadget Anda di Bengkulu. Mengutamakan kualitas, transparansi, dan kepuasan pelanggan sejak 2020.
+                    </p>
                 </div>
+
                 <div class="footer-col">
-                    <h4>Lokasi Workshop</h4>
-                    <div class="footer-link-box">
-                        <a href="https://maps.app.goo.gl/JuE7htYzoXSkNnsu5" target="_blank">
-                            <i class="fas fa-map-marked-alt fa-2x" style="color:var(--neon-blue)"></i>
-                            <div>
-                                <span style="display:block; font-weight: 700; color: #fff;">Klik untuk Google Maps:</span>
-                                <span style="font-size: 0.95rem;">Jl. Flamboyan 23 No.40b<br>Kebun Kenanga, Bengkulu</span>
-                            </div>
-                        </a>
-                    </div>
+                    <h4 class="footer-heading">Lokasi Workshop</h4>
+                    <a href="https://maps.google.com/?q=RR+Service+Bengkulu" target="_blank" class="footer-contact-box">
+                        <i class="fas fa-map-marked-alt fa-2x" style="color:var(--neon-blue)"></i>
+                        <div>
+                            <span style="display:block; font-weight: 700; color: #fff; font-size:0.9rem;">Klik Google Maps:</span>
+                            <span style="font-size: 0.9rem; color:var(--text-secondary);">Jl. Flamboyan 23 No.40b<br>Kebun Kenanga, Bengkulu</span>
+                        </div>
+                    </a>
                 </div>
+
                 <div class="footer-col">
-                    <h4>Kontak Cepat</h4>
-                    <div class="footer-link-box">
-                        <a href="https://wa.me/6281379689393" target="_blank">
-                            <i class="fab fa-whatsapp fa-2x" style="color:#25d366"></i>
-                            <div>
-                                <span style="display:block; font-weight: 700; color: #fff;">WhatsApp Admin:</span>
-                                <span style="font-size: 1.1rem;">0813-7968-9393</span>
-                            </div>
-                        </a>
-                    </div>
+                    <h4 class="footer-heading">Kontak Cepat</h4>
+                    <a href="https://wa.me/6281379689393" target="_blank" class="footer-contact-box">
+                        <i class="fab fa-whatsapp fa-2x" style="color:#25d366"></i>
+                        <div>
+                            <span style="display:block; font-weight: 700; color: #fff; font-size:0.9rem;">WhatsApp Admin:</span>
+                            <span style="font-size: 1.1rem; color:var(--text-secondary);">0813-7968-9393</span>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div style="text-align:center; margin-top:80px; border-top:1px solid rgba(255,255,255,0.1); padding-top:30px; font-size: 0.9rem; opacity: 0.7;">
-                <p>© 2026 RR SERVICE Bengkulu. All rights reserved. | Cyber Modern Design.</p>
+
+            <div class="footer-bottom">
+                <p>© 2026 RR SERVICE Bengkulu. All rights reserved.</p>
+                <small style="opacity: 0.6;">Cyber Modern Design Interface</small>
             </div>
         </div>
     </footer>
 
-    <div class="widget-container">
+  <div class="widget-container">
         <div class="settings-panel" id="settingsPanel">
             <h4>Pengaturan Tampilan</h4>
             <button class="theme-switch-btn" id="themeToggle">
                 <i class="fas fa-moon"></i> Mode Gelap
             </button>
         </div>
+        
         <button class="float-btn" id="settingsBtn" title="Pengaturan">
             <i class="fas fa-cog"></i>
         </button>
+        
         <a href="https://wa.me/6281379689393" target="_blank" class="float-btn whatsapp" title="Hubungi via WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="#" class="float-btn facebook" title="Ikuti di Facebook">
+        <a href="https://www.facebook.com/share/181am1exQn/?mibextid=wwXIfr" class="float-btn facebook" title="Ikuti di Facebook">
             <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="#" class="float-btn instagram" title="Ikuti di Instagram">
+        <a href="https://www.instagram.com/rrservicestore?igsh=ajBoMGV3dms0aW1k" class="float-btn instagram" title="Ikuti di Instagram">
             <i class="fab fa-instagram"></i>
         </a>
+        
+        <a href="https://www.tiktok.com/@rrservicestore?_r=1&_t=ZS-93QKvzr0Vhw" class="float-btn tiktok" title="Ikuti di TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
     </div>
-
     <div id="statusModal" class="modal">
         <div class="modal-content glass-panel">
             <span class="close-modal">×</span>
