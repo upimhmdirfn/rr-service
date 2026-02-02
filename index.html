@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+   <div id="preloader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <div class="loading-text">Loading</div>
+        </div>
+    </div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jasa Service HP Bengkulu - RR SERVICE. Spesialis iPhone dan Android, ganti LCD, baterai, mati total. Cek status servis online disini.">
+    
+    <meta name="description" content="Cari konter servis hape Bengkulu terpercaya? RR SERVICE ahlinya. Spesialis servis iPhone Bengkulu, ganti LCD, dan ganti baterai bisa ditunggu. Cek harga disini!">
     <meta name="keywords" content="service hp bengkulu, ganti lcd iphone, service android, rr service, cek status service hp">
     <meta name="author" content="RR SERVICE">
-    
     <meta name="google-site-verification" content="ogyo-klZF_xLo1lBTUl_bjf5tj3C7M2ZJfn_wZELvVU" />
     
-    <title>RR SERVICE - Ahli Service Android & iPhone Bengkulu</title>
+    <title>RR SERVICE - Servis iPhone & Ganti LCD HP Bengkulu (Bergaransi)</title>
     
     <link rel="canonical" href="https://rrservicestore.com/">
 
@@ -24,7 +30,10 @@
     <meta name="twitter:description" content="Solusi perbaikan gadget iPhone & Android cepat dan bergaransi di Bengkulu.">
     <meta name="twitter:image" content="https://rrservicestore.com/assets/images/logo.png">
 
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/logo.png"> 
+    <link rel="apple-touch-icon" href="assets/images/logo.png">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -64,7 +73,8 @@
     <header id="navbar">
         <div class="container header-container">
             <a href="#home" class="logo">
-                <img src="assets/images/logo.png" alt="RR Service Logo">
+                <img src="assets/images/xx.png" alt="RR Service Logo">
+                <span>RR SERVICE</span>
             </a>
             
             <div class="menu-toggle" id="mobile-menu">
@@ -90,10 +100,10 @@
     <section id="home">
         <div class="container">
             <div class="hero-content">
-                <span class="hero-badge">✨ #1 Service Gadget di Bengkulu</span>
-                <h1>Service iPhone & Android<br>Terpercaya di Bengkulu</h1>
-                <p>Solusi perbaikan gadget dengan standar profesional, suku cadang original, dan garansi resmi.</p>
-                <div class="hero-buttons">
+                <span class="hero-badge reveal">✨ #1 Service Gadget di Bengkulu</span>
+                <h1 class="reveal reveal-delay-1">Service iPhone & Android<br>Terpercaya di Bengkulu</h1>
+                <p class="reveal reveal-delay-2">Solusi perbaikan gadget dengan standar profesional, suku cadang original, dan garansi resmi.</p>
+                <div class="hero-buttons reveal reveal-delay-3">
                     <a href="#booking" class="btn btn-primary">Booking Antrian <i class="fas fa-arrow-right" style="margin-left:8px;"></i></a>
                     <button id="btnCheckStatusHero" class="btn btn-outline">Cek Status Servis</button>
                 </div>
@@ -103,17 +113,17 @@
 
     <div class="container features-section">
         <div class="features-grid">
-            <div class="feature-box glass-panel">
+            <div class="feature-box glass-panel reveal">
                 <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
                 <h3>Garansi 90 Hari</h3>
                 <p>Keamanan purna jual terjamin untuk ketenangan Anda.</p>
             </div>
-            <div class="feature-box glass-panel">
+            <div class="feature-box glass-panel reveal reveal-delay-1">
                 <div class="feature-icon"><i class="fas fa-bolt"></i></div>
                 <h3>Service Kilat</h3>
                 <p>Pengerjaan ringan bisa ditunggu 30-60 menit.</p>
             </div>
-            <div class="feature-box glass-panel">
+            <div class="feature-box glass-panel reveal reveal-delay-2">
                 <div class="feature-icon"><i class="fas fa-medal"></i></div>
                 <h3>Teknisi Pro</h3>
                 <p>Ditangani langsung oleh ahli bersertifikat.</p>
@@ -123,12 +133,12 @@
 
     <section id="services">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Layanan Premium Kami</h2>
                 <p>Spesialis perbaikan Hardware & Software dengan alat modern</p>
             </div>
             <div class="service-grid">
-                <div class="service-card glass-panel">
+                <div class="service-card glass-panel reveal">
                     <span class="service-price">Mulai Rp 200K</span>
                     <h3><i class="fas fa-mobile-alt"></i> Ganti LCD / Layar</h3>
                     <ul class="service-list">
@@ -137,7 +147,7 @@
                         <li><i class="fas fa-check-circle"></i> Blank Hitam/Bergaris</li>
                     </ul>
                 </div>
-                <div class="service-card glass-panel">
+                <div class="service-card glass-panel reveal reveal-delay-1">
                     <span class="service-price">Mulai Rp 150K</span>
                     <h3><i class="fas fa-battery-bolt"></i> Ganti Baterai Health</h3>
                     <ul class="service-list">
@@ -146,7 +156,7 @@
                         <li><i class="fas fa-check-circle"></i> Baterai Kembung</li>
                     </ul>
                 </div>
-                <div class="service-card glass-panel">
+                <div class="service-card glass-panel reveal reveal-delay-2">
                     <span class="service-price">Mulai Rp 300K</span>
                     <h3><i class="fas fa-microchip"></i> Service Mesin & IC</h3>
                     <ul class="service-list">
@@ -161,44 +171,44 @@
 
     <section id="booking">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Booking Service Online</h2>
                 <p>Isi form untuk mendapatkan prioritas antrian VIP</p>
             </div>
             
-            <div class="delivery-banner glass-panel" style="margin-bottom: 30px; display:flex; align-items:center; gap:20px; padding:20px; border:1px solid var(--neon-green);">
-                <div style="background:rgba(10, 255, 96, 0.2); width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center;">
-                    <i class="fas fa-motorcycle" style="font-size:1.8rem; color:var(--neon-green);"></i>
+            <div class="delivery-banner reveal">
+                <div style="background:rgba(16, 185, 129, 0.15); width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center;">
+                    <i class="fas fa-motorcycle" style="font-size:1.5rem; color:var(--neon-green);"></i>
                 </div>
                 <div>
-                    <h3 style="margin:0; font-size:1.2rem;">Tersedia Layanan Antar Jemput!</h3>
-                    <p style="margin:0; font-size:0.95rem; color:var(--text-secondary);">Mager keluar rumah? Pilih opsi <b>"Antar Jemput"</b> di form bawah ini. Kurir kami akan datang ke lokasi Anda.</p>
+                    <h3 style="margin:0; font-size:1.1rem; color: var(--text-main);">Tersedia Layanan Antar Jemput!</h3>
+                    <p style="margin:0; font-size:0.9rem; color:var(--text-secondary);">Mager keluar rumah? Pilih opsi <b>"Antar Jemput"</b> di form bawah ini.</p>
                 </div>
             </div>
 
-            <div class="booking-wrapper">
+            <div class="booking-wrapper reveal reveal-delay-1">
                 <div class="booking-info">
                     <h3>Hubungi RR SERVICE</h3>
                     <p>Konsultasi gratis permasalahan gadget Anda sebelum datang ke toko.</p>
-                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
-                        <i class="fab fa-whatsapp" style="font-size: 3rem; color: #0aff60;"></i>
-                        <h2 style="font-size:2.5rem; font-weight: 800;">0813-7968-9393</h2>
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px; margin-top: 20px;">
+                        <i class="fab fa-whatsapp" style="font-size: 2.5rem; color: #fff;"></i>
+                        <h2 style="font-size:2rem; font-weight: 800; margin:0;">0813-7968-9393</h2>
                     </div>
-                    <hr style="border-color:rgba(255,255,255,0.1); margin:30px 0;">
-                    <p style="font-weight: 600; display: flex; align-items: center; gap: 10px;">
-                        <i class="fas fa-map-pin" style="color:var(--neon-blue)"></i> Lokasi: Kota Bengkulu
+                    <hr style="border-color:rgba(255,255,255,0.2); margin:30px 0;">
+                    <p style="font-weight: 500; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-map-pin"></i> Lokasi: Kota Bengkulu
                     </p>
                 </div>
                 <form class="booking-form" id="waForm">
-                    <div class="form-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+                    <div class="form-grid">
                         <div style="grid-column: 1/-1">
                             <label>Nama Lengkap</label>
                             <input type="text" id="waName" placeholder="Masukkan Nama Anda">
                         </div>
                         
                         <div style="grid-column: 1/-1">
-                            <label style="color:var(--neon-green); font-weight:bold;">Metode Layanan</label>
-                            <select id="waMethod" style="border-color:var(--neon-green);">
+                            <label style="color:var(--primary); font-weight:bold;">Metode Layanan</label>
+                            <select id="waMethod" style="border-color:var(--primary);">
                                 <option value="Datang ke Toko">Saya Datang Sendiri ke Toko</option>
                                 <option value="Antar Jemput">Request Antar Jemput (Delivery)</option>
                             </select>
@@ -226,10 +236,10 @@
                         </div>
                         <div style="grid-column: 1/-1">
                             <label>Detail Keluhan / Alamat Jemput</label>
-                            <textarea id="waMessage" rows="4" placeholder="Jelaskan kondisi HP. Jika pilih Antar Jemput, tulis alamat lengkap Anda disini..."></textarea>
+                            <textarea id="waMessage" rows="3" placeholder="Jelaskan kondisi HP. Jika pilih Antar Jemput, tulis alamat lengkap Anda disini..."></textarea>
                         </div>
                     </div>
-                    <button type="submit">
+                    <button type="submit" class="btn btn-primary">
                         <i class="fab fa-whatsapp"></i> KIRIM BOOKING
                     </button>
                 </form>
@@ -239,12 +249,12 @@
 
     <section id="pricing">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Estimasi Biaya Service</h2>
                 <p>Harga transparan dengan kualitas sparepart terbaik</p>
             </div>
             <div class="pricing-container">
-                <div class="pricing-card glass-panel">
+                <div class="pricing-card glass-panel reveal">
                     <div class="pricing-header iphone">
                         <h3><i class="fab fa-apple" style="margin-right: 10px;"></i> iPhone Specialis</h3>
                     </div>
@@ -256,7 +266,7 @@
                         <div class="price-row"><span>Repair Kaca Belakang</span><strong>Mulai dari Rp 550K</strong></div>
                     </div>
                 </div>
-                <div class="pricing-card glass-panel">
+                <div class="pricing-card glass-panel reveal reveal-delay-1">
                     <div class="pricing-header android">
                         <h3><i class="fab fa-android" style="margin-right: 10px;"></i> Android Expert</h3>
                     </div>
@@ -265,7 +275,6 @@
                         <div class="price-row"><span>LCD Xiaomi/Oppo/Vivo</span><strong>Mulai dari Rp 350K</strong></div>
                         <div class="price-row"><span>Ganti Baterai Tanam Ori</span><strong>Mulai dari Rp 250K</strong></div>
                         <div class="price-row"><span>Ganti Konektor Charger</span><strong> Mulai dari Rp 50K </strong></div>
-                        
                         <div class="price-row"><span>Software / Bootloop</span><strong>Mulai dari Rp 100K</strong></div>
                     </div>
                 </div>
@@ -275,12 +284,12 @@
 
     <section id="reviews">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Kata Mereka</h2>
                 <p>Ulasan asli dari pelanggan kepuasan RR SERVICE</p>
             </div>
             <div class="reviews-grid">
-                <div class="review-card glass-panel">
+                <div class="review-card glass-panel reveal">
                     <div class="review-header">
                         <div class="stars">★★★★★</div>
                         <span class="google-icon"><i class="fab fa-google"></i></span>
@@ -294,7 +303,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="review-card glass-panel">
+                <div class="review-card glass-panel reveal reveal-delay-1">
                     <div class="review-header">
                         <div class="stars">★★★★★</div>
                         <span class="google-icon"><i class="fab fa-google"></i></span>
@@ -308,7 +317,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="review-card glass-panel">
+                <div class="review-card glass-panel reveal reveal-delay-2">
                     <div class="review-header">
                         <div class="stars">★★★★★</div>
                         <span class="google-icon"><i class="fab fa-google"></i></span>
@@ -326,64 +335,52 @@
         </div>
     </section>
     
- <section id="gallery">
+    <section id="gallery">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Dokumentasi & Aktivitas</h2>
                 <p>Transparansi kerja dengan alat lengkap dan sparepart berkualitas</p>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-card glass-panel">
-                     <img src="/assets/images/tools.jpg"
-         alt="Service Software"
-         class="gallery-img"
-         loading="lazy">
+                <div class="gallery-card glass-panel reveal">
+                     <img src="assets/images/tools.jpg" alt="Peralatan Servis HP Bengkulu" class="gallery-img" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Peralatan Presisi</div>
                         <div class="gallery-desc">Menggunakan mikroskop dan alat solder modern.</div>
                     </div>
                 </div>
-                <div class="gallery-card glass-panel">
-                     <img src="/assets/images/baterai.jpg"
-         alt="Service Software"
-         class="gallery-img"
-         loading="lazy">
+                <div class="gallery-card glass-panel reveal reveal-delay-1">
+                     <img src="assets/images/baterai.jpg" alt="Ganti Baterai iPhone Bengkulu" class="gallery-img" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Ganti LCD & Baterai</div>
                         <div class="gallery-desc">Pengerjaan rapi, segel kembali presisi.</div>
                     </div>
                 </div>
-                <div class="gallery-card glass-panel">
-   <img src="/assets/images/sparepart.jpg"
-         alt="Service Software"
-         class="gallery-img"
-         loading="lazy">
+                <div class="gallery-card glass-panel reveal reveal-delay-2">
+                    <img src="assets/images/sparepart.jpg" alt="Stok Sparepart HP Bengkulu" class="gallery-img" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Stok Sparepart</div>
                         <div class="gallery-desc">Tersedia komponen original lengkap.</div>
                     </div>
                 </div>
-              <div class="gallery-card glass-panel">
-    <img src="/assets/images/software.jpg"
-         alt="Service Software"
-         class="gallery-img"
-         loading="lazy">
-    <div class="gallery-overlay">
-        <div class="gallery-title">Software & Data</div>
-        <div class="gallery-desc">Perbaikan bootloop dan backup data.</div>
-    </div>
-</div>
+                <div class="gallery-card glass-panel reveal reveal-delay-3">
+                    <img src="assets/images/software.jpg" alt="Service Software HP Bengkulu" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Software & Data</div>
+                        <div class="gallery-desc">Perbaikan bootloop dan backup data.</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="faq">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Pertanyaan Umum (FAQ)</h2>
                 <p>Jawaban cepat untuk pertanyaan yang sering diajukan</p>
             </div>
-            <div class="faq-container">
+            <div class="faq-container reveal">
                 <div class="faq-item glass-panel">
                     <div class="faq-question">
                         <h3>Berapa lama proses ganti baterai/LCD?</h3>
@@ -423,21 +420,49 @@
             </div>
         </div>
     </section>
-    <!-- <section style="background: var(--nav-bg); padding: 50px 0;">
-    <div class="container">
-        <div style="max-width: 800px; margin: 0 auto; text-align: left; color: var(--text-secondary);">
-            <h3 style="color: var(--text-main); margin-bottom: 20px;">Tempat Service HP Terlengkap di Bengkulu</h3>
-            <p style="margin-bottom: 15px;">
-                Mencari <strong>tempat service HP di Bengkulu</strong> yang amanah dan transparan? RR SERVICE hadir sebagai solusi perbaikan gadget kesayangan Anda. Kami melayani perbaikan berbagai tipe smartphone mulai dari <strong>Service iPhone Bengkulu</strong> (iPhone 11, 12, 13, hingga 15 Series) hingga HP Android seperti Samsung, Xiaomi, Oppo, dan Vivo.
-            </p>
-            <p>
-                Layanan unggulan kami meliputi <strong>ganti LCD iPhone</strong> dengan sparepart berkualitas, pergantian baterai tanam (battery health), perbaikan HP mati total, hingga masalah software/bootloop. Lokasi kami strategis di Kebun Kenanga, Kota Bengkulu, siap melayani pelanggan dengan garansi resmi toko hingga 90 hari.
-            </p>
-        </div>
-    </div>
-</section> -->
 
-   <footer id="contact">
+    <section id="about-seo" style="padding-bottom: 50px;">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Tentang RR SERVICE Bengkulu</h2>
+                <p>Komitmen kami sebagai solusi gadget terpercaya Anda</p>
+            </div>
+            
+            <div class="glass-panel reveal" style="padding: 40px 30px; text-align: left; max-width: 900px; margin: 0 auto;">
+                <div style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+                    <p style="margin-bottom: 20px;">
+                        <strong style="color: var(--text-main); font-size: 1.2rem;">Pusat Servis Hape Terpercaya di Bengkulu.</strong><br>
+                        Mengalami masalah dengan gadget kesayangan menghambat produktivitas Anda. <strong>RR SERVICE</strong> hadir sebagai solusi cepat dan amanah. Kami dikenal sebagai spesialis <strong>servis iPhone Bengkulu</strong> yang menangani seri lawas hingga terbaru (iPhone 7 s/d 15 Pro Max) dengan transparansi penuh.
+                    </p>
+
+                    <h3 style="font-size: 1.4rem; color: var(--text-main); margin-top: 30px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-star" style="color: var(--neon-blue);"></i> Layanan Unggulan Kami
+                    </h3>
+                    
+                    <ul style="list-style: none; padding-left: 0; margin-bottom: 25px;">
+                        <li style="margin-bottom: 15px; display: flex; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: var(--neon-green); margin-top: 5px;"></i>
+                            <div><strong>Ganti LCD Bengkulu (Bisa Ditunggu):</strong> Solusi layar pecah, bergaris, atau ghost touch. Kami menyediakan opsi LCD Original dan OLED presisi dengan pengerjaan kilat 30-60 menit.</div>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: var(--neon-green); margin-top: 5px;"></i>
+                            <div><strong>Ganti Baterai Health:</strong> Baterai cepat habis, kembung, atau iPhone sering restart? Layanan ganti baterai tanam kami mengembalikan performa maksimal gadget Anda.</div>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: var(--neon-green); margin-top: 5px;"></i>
+                            <div><strong>Servis Android Lengkap:</strong> Teknisi kami berpengalaman menangani berbagai kerusakan hardware/software pada Samsung, Xiaomi, Oppo, Vivo, dan Realme.</div>
+                        </li>
+                    </ul>
+
+                    <p>
+                        Jangan ragu mengunjungi workshop kami di Kebun Kenanga. Dapatkan layanan <strong>konter hape terpercaya di Bengkulu</strong> dengan garansi jelas dan pengecekan gratis sebelum tindakan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
         <div class="container">
             <div class="footer-grid">
                 
@@ -452,7 +477,7 @@
 
                 <div class="footer-col">
                     <h4 class="footer-heading">Lokasi Workshop</h4>
-                    <a href="https://maps.google.com/?q=RR+Service+Bengkulu" target="_blank" class="footer-contact-box">
+                    <a href="https://maps.app.goo.gl/XXXYOURMAPSLINK" target="_blank" class="footer-contact-box">
                         <i class="fas fa-map-marked-alt fa-2x" style="color:var(--neon-blue)"></i>
                         <div>
                             <span style="display:block; font-weight: 700; color: #fff; font-size:0.9rem;">Klik Google Maps:</span>
@@ -480,7 +505,7 @@
         </div>
     </footer>
 
-  <div class="widget-container">
+    <div class="widget-container">
         <div class="settings-panel" id="settingsPanel">
             <h4>Pengaturan Tampilan</h4>
             <button class="theme-switch-btn" id="themeToggle">
@@ -506,16 +531,17 @@
             <i class="fab fa-tiktok"></i>
         </a>
     </div>
+
     <div id="statusModal" class="modal">
         <div class="modal-content glass-panel">
             <span class="close-modal">×</span>
             <div style="text-align:center; margin-bottom:20px;">
                 <i class="fas fa-search" style="font-size:3rem; color:var(--primary);"></i>
-                <h2 style="margin-top:10px;">Cek Status Servis</h2>
+                <h2 style="margin-top:10px; font-weight:800;">Cek Status Servis</h2>
                 <p style="color:var(--text-secondary);">Masukkan Kode Invoice Anda (Contoh: INV-001)</p>
             </div>
             <div class="search-box-wrapper">
-                <input type="text" id="invoiceInput" placeholder="Kode Invoice..." style="text-align:center; font-weight:bold; letter-spacing:1px; text-transform:uppercase;">
+                <input type="text" id="invoiceInput" placeholder="KODE INVOICE" style="text-align:center; font-weight:bold; letter-spacing:2px; text-transform:uppercase; font-size:1.2rem;">
                 <button id="btnSearchInvoice" class="btn btn-primary" style="width:100%; margin-top:10px;">CEK SEKARANG</button>
             </div>
             <div id="statusResult" class="status-result" style="display:none;">
